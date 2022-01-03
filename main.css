@@ -301,3 +301,65 @@
   transition: 1s all;
   transform: scale(1, 1);
 }
+.btn__type--gradient {
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-size: 200% auto;
+  transition: 0.5s;
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+.btn__type--gradient:hover {
+  background-position: right center;
+}
+.btn__type--neumorphic {
+  color: #9baacf;
+  box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem white;
+}
+
+.btn__type--neumorphic:hover {
+  color: #6d5dfc;
+}
+.btn__type--neumorphic:active {
+  box-shadow: inset 0.2rem 0.2rem 0.5rem #e4ebf5, inset -0.2rem -0.2rem 0.5rem white;
+}
+
+/* 전환이 자연스러운 nav바 */
+.navradio__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6eef9;
+}
+.navradio__tabs {
+  display: flex;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 0 1px 0 #185ee0, 0 6px 12px 0 #185ee0;
+  padding: 20px;
+  border-radius: 10px;
+}
+.navradio__tabs input {
+  display: none;
+}
+.navradio__option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s ease-in;
+}
+.navradio__glider {
+  position: absolute;
+  display: flex;
+  height: 30px;
+  width: 70px;
+  background-color: #185ee0;
+  z-index: 1;
+  border-radius: 10px;
+  opacity: 0.3;
+  transition: 0.25s ease-in;
+}
