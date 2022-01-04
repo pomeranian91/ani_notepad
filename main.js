@@ -36,3 +36,12 @@ document.querySelector('.radiobtn3').onclick =function(){
     document.querySelector('.radiobtn2').style.color = "black";
     document.querySelector('.radiobtn3').style.color = "red";
 };
+
+// sunrisevideo클릭이벤트
+document.querySelector('.sunrise__video').onclick = function(){
+    if(document.querySelector('.sunrise__video').style.clipPath == "circle(15% at 50% 30%)"){
+        document.querySelector('.sunrise__video').style.clipPath = "circle(100% at 50% 30%)";
+    } else{
+         document.querySelector('.sunrise__video').style.clipPath = 'circle(15% at 50% 30%)';
+    }
+}

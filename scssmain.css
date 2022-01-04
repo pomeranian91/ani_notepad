@@ -1,0 +1,23 @@
+.sunrise__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sunrise__container {
+  position: relative;
+  background-color: #c4baba;
+}
+
+.sunrise__video {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  -webkit-clip-path: circle(15% at 50% 30%);
+          clip-path: circle(15% at 50% 30%);
+  transition: -webkit-clip-path 2s ease;
+  transition: clip-path 2s ease;
+  transition: clip-path 2s ease, -webkit-clip-path 2s ease;
+  cursor: pointer;
+}/*# sourceMappingURL=scssmain.css.map */

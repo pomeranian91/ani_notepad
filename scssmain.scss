@@ -1,0 +1,20 @@
+%flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sunrise__container {
+  @extend %flexCenter;
+  position: relative;
+  background-color: #c4baba;
+}
+.sunrise__video {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  clip-path: circle(15% at 50% 30%);
+  transition: clip-path 2s ease;
+  cursor: pointer;
+}
