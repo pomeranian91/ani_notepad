@@ -230,20 +230,15 @@
 }
 .btn__changeback--ico:hover {
   animation: btnrotate;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 @keyframes btnrotate {
-  0% {
+  from {
     transform: rotateY(0deg);
   }
-  25% {
-    transform: rotateY(180deg);
-  }
-  75% {
-    transform: rotateY(270deg);
-  }
-  100% {
+
+  to {
     transform: rotateY(360deg);
   }
 }

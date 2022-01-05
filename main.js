@@ -5,6 +5,7 @@ function random(low,high){
 console.log(random(3,10));
 
 /* 클릭시 배경 랜덤 변경 */
+document.querySelector('.randombackground').style.backgroundColor = "#" + Math.round(Math.random() * 0xffffff).toString(16);
 function backcolor(){
     let backcolorcode = "#" + Math.round(Math.random() * 0xffffff).toString(16);
     document.querySelector('.randombackground').style.backgroundColor = backcolorcode
@@ -38,10 +39,13 @@ document.querySelector('.radiobtn3').onclick =function(){
 };
 
 // sunrisevideo클릭이벤트
+document.querySelector('.sunrise__video').style.clipPath="circle(15% at 50% 30%)"
 document.querySelector('.sunrise__video').onclick = function(){
-    if(document.querySelector('.sunrise__video').style.clipPath == "circle(15% at 50% 30%)"){
-        document.querySelector('.sunrise__video').style.clipPath = "circle(100% at 50% 30%)";
+    let videoCircle = "circle(15% at 50% 30%)"
+    let videoFull = "circle(100% at 50% 30%)"
+    if(document.querySelector('.sunrise__video').style.clipPath == videoCircle){
+        document.querySelector('.sunrise__video').style.clipPath = videoFull;
     } else{
-         document.querySelector('.sunrise__video').style.clipPath = 'circle(15% at 50% 30%)';
+         document.querySelector('.sunrise__video').style.clipPath = videoCircle;
     }
 }
