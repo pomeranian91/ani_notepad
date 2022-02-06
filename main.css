@@ -359,3 +359,62 @@
   opacity: 0.3;
   transition: 0.25s ease-in;
 }
+/* 로딩 중 */
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+.circle-text {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  animation: circle-loading 2.5s linear 0s infinite;
+}
+.circle-border {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  background: linear-gradient(0deg, #eee 33%, red 100%);
+  border-radius: 50%;
+  animation: circle-spin 2.5s linear 0s infinite;
+}
+.circle-core {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50%;
+}
+@keyframes circle-loading {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes circle-spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
